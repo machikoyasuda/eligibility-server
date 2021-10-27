@@ -1,0 +1,1372 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="canonical" href="https://docs.calitp.org/eligibility-server/specification/example-transactions/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.4">
+    
+    
+      
+        <title>Example transactions - cal-itp/eligibility-server: documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.db9e7362.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+    
+    
+      
+
+  
+
+
+  
+
+  
+
+
+  <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-SZB618VNBZ"),document.addEventListener("DOMContentLoaded",function(){"undefined"!=typeof location$&&location$.subscribe(function(t){gtag("config","G-SZB618VNBZ",{page_path:t.pathname})})})</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SZB618VNBZ"></script>
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="amber">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#example-transactions" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="cal-itp/eligibility-server: documentation" class="md-header__button md-logo" aria-label="cal-itp/eligibility-server: documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            cal-itp/eligibility-server: documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Example transactions
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="amber"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="amber"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/cal-itp/eligibility-server/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../getting-started/" class="md-tabs__link">
+      Getting started
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../releases/" class="md-tabs__link">
+      Releases
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../" class="md-tabs__link md-tabs__link--active">
+        Specification
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="cal-itp/eligibility-server: documentation" class="md-nav__button md-logo" aria-label="cal-itp/eligibility-server: documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    cal-itp/eligibility-server: documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/cal-itp/eligibility-server/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/" class="md-nav__link">
+        Getting started
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../releases/" class="md-nav__link">
+        Releases
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Specification
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Specification" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Specification
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        API Specification
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Example transactions
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Example transactions
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sample-server" class="md-nav__link">
+    Sample server
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage-of-jwt-in-examples" class="md-nav__link">
+    Usage of JWT in examples
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-jwt-header" class="md-nav__link">
+    Example JWT header
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-encodingdecoding" class="md-nav__link">
+    Test encoding/decoding
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-eligible-senior" class="md-nav__link">
+    1. Eligible senior
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Eligible senior">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-jwt-payload" class="md-nav__link">
+    Request JWT payload
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http-request" class="md-nav__link">
+    HTTP Request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http-response" class="md-nav__link">
+    HTTP Response
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-jwt-payload" class="md-nav__link">
+    Response JWT payload
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-ineligible-senior" class="md-nav__link">
+    2. Ineligible senior
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Ineligible senior">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-jwt-payload_1" class="md-nav__link">
+    Request JWT payload
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http-request_1" class="md-nav__link">
+    HTTP Request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http-response_1" class="md-nav__link">
+    HTTP Response
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-jwt-payload_1" class="md-nav__link">
+    Response JWT payload
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-no-eligibility-data" class="md-nav__link">
+    3. No eligibility data
+  </a>
+  
+    <nav class="md-nav" aria-label="3. No eligibility data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-jwt-payload_2" class="md-nav__link">
+    *Request JWT payload
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http-request_2" class="md-nav__link">
+    HTTP Request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http-response_2" class="md-nav__link">
+    HTTP Response
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-jwt-payload_2" class="md-nav__link">
+    Response JWT payload
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-missing-request-data" class="md-nav__link">
+    4. Missing request data
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Missing request data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-jwt-payload_3" class="md-nav__link">
+    Request JWT payload
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http-request_3" class="md-nav__link">
+    HTTP Request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http-response_3" class="md-nav__link">
+    HTTP Response
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-jwt-payload_3" class="md-nav__link">
+    Response JWT payload
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-invalid-request-data" class="md-nav__link">
+    5. Invalid request data
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Invalid request data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-jwt-payload_4" class="md-nav__link">
+    Request JWT payload
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http-request_4" class="md-nav__link">
+    HTTP Request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http-response_4" class="md-nav__link">
+    HTTP Response
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-jwt-payload_4" class="md-nav__link">
+    Response JWT payload
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../token-signing-encryption/" class="md-nav__link">
+        Token signing and encryption
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sample-server" class="md-nav__link">
+    Sample server
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage-of-jwt-in-examples" class="md-nav__link">
+    Usage of JWT in examples
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-jwt-header" class="md-nav__link">
+    Example JWT header
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-encodingdecoding" class="md-nav__link">
+    Test encoding/decoding
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-eligible-senior" class="md-nav__link">
+    1. Eligible senior
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Eligible senior">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-jwt-payload" class="md-nav__link">
+    Request JWT payload
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http-request" class="md-nav__link">
+    HTTP Request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http-response" class="md-nav__link">
+    HTTP Response
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-jwt-payload" class="md-nav__link">
+    Response JWT payload
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-ineligible-senior" class="md-nav__link">
+    2. Ineligible senior
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Ineligible senior">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-jwt-payload_1" class="md-nav__link">
+    Request JWT payload
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http-request_1" class="md-nav__link">
+    HTTP Request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http-response_1" class="md-nav__link">
+    HTTP Response
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-jwt-payload_1" class="md-nav__link">
+    Response JWT payload
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-no-eligibility-data" class="md-nav__link">
+    3. No eligibility data
+  </a>
+  
+    <nav class="md-nav" aria-label="3. No eligibility data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-jwt-payload_2" class="md-nav__link">
+    *Request JWT payload
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http-request_2" class="md-nav__link">
+    HTTP Request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http-response_2" class="md-nav__link">
+    HTTP Response
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-jwt-payload_2" class="md-nav__link">
+    Response JWT payload
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-missing-request-data" class="md-nav__link">
+    4. Missing request data
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Missing request data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-jwt-payload_3" class="md-nav__link">
+    Request JWT payload
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http-request_3" class="md-nav__link">
+    HTTP Request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http-response_3" class="md-nav__link">
+    HTTP Response
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-jwt-payload_3" class="md-nav__link">
+    Response JWT payload
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-invalid-request-data" class="md-nav__link">
+    5. Invalid request data
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Invalid request data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-jwt-payload_4" class="md-nav__link">
+    Request JWT payload
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http-request_4" class="md-nav__link">
+    HTTP Request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http-response_4" class="md-nav__link">
+    HTTP Response
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-jwt-payload_4" class="md-nav__link">
+    Response JWT payload
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/cal-itp/eligibility-server/edit/main/docs/specification/example-transactions.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="example-transactions">Example transactions<a class="headerlink" href="#example-transactions" title="Permanent link"> ¶</a></h1>
+<p>This page outlines example roundtrip HTTP transactions conforming to the <a href="../">Eligibility Verification API</a>.</p>
+<h2 id="sample-server">Sample server<a class="headerlink" href="#sample-server" title="Permanent link"> ¶</a></h2>
+<p>For the following examples, assume a Server with a database like:</p>
+<table>
+<thead>
+<tr>
+<th>Driver&rsquo;s License Number</th>
+<th>Last Name</th>
+<th>Date of Birth</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A1234567</td>
+<td>Garcia</td>
+<td>1955-08-27</td>
+</tr>
+<tr>
+<td>B2345678</td>
+<td>Hernandez</td>
+<td>1961-01-23</td>
+</tr>
+</tbody>
+</table>
+<p>Further, assume the Server validates the eligibility type <code>senior</code> for those individuals age 65 or older.</p>
+<h2 id="usage-of-jwt-in-examples">Usage of JWT in examples<a class="headerlink" href="#usage-of-jwt-in-examples" title="Permanent link"> ¶</a></h2>
+<p>For the purposes of these examples, JWT signing will be done using the simpler, secret-based <a href="https://en.wikipedia.org/wiki/SHA-2">HMAC SHA-256</a> (HS256)
+signing algorithm. <strong>This is not appropriate for production</strong> as it does not carry the same guarantees as a public-key signing
+algorithm.</p>
+<h2 id="example-jwt-header">Example JWT header<a class="headerlink" href="#example-jwt-header" title="Permanent link"> ¶</a></h2>
+<p>Although the header will indicate otherwise, for simplification the examples <em>will not show encryption/decryption</em> of the JWT.</p>
+<p>The JWT header (both Request and Response) for each of the following examples is:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;alg&quot;</span><span class="p">:</span> <span class="s2">&quot;HS256&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;enc&quot;</span><span class="p">:</span> <span class="s2">&quot;RS256&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;typ&quot;</span><span class="p">:</span> <span class="s2">&quot;JWT&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="test-encodingdecoding">Test encoding/decoding<a class="headerlink" href="#test-encodingdecoding" title="Permanent link"> ¶</a></h2>
+<p>To test JWT encoding/decoding, use the Debugger tool on <a href="https://jwt.io/">JWT.IO</a>. Paste in an encoded key to get the decoded output.
+Or build decoded output to see the corresponding encoded key.</p>
+<p><strong>This tool must not be used with real (PII) data.</strong></p>
+<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link"> ¶</a></h2>
+<h3 id="1-eligible-senior">1. Eligible senior<a class="headerlink" href="#1-eligible-senior" title="Permanent link"> ¶</a></h3>
+<blockquote>
+<p>This JWT was issued at 2021/09/29 05:30:16 (UTC); the subject (Garcia) is 66 years old.</p>
+</blockquote>
+<h4 id="request-jwt-payload">Request JWT payload<a class="headerlink" href="#request-jwt-payload" title="Permanent link"> ¶</a></h4>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;jti&quot;</span><span class="p">:</span> <span class="s2">&quot;0890cce7-25d3-425c-a81b-bc437c2e18a3&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;iss&quot;</span><span class="p">:</span> <span class="s2">&quot;https://calitp.org&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;iat&quot;</span><span class="p">:</span> <span class="mi">1632893416</span><span class="p">,</span>
+  <span class="nt">&quot;agency&quot;</span><span class="p">:</span> <span class="s2">&quot;ABC Transit Company&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;eligibility&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;senior&quot;</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;sub&quot;</span><span class="p">:</span> <span class="s2">&quot;A1234567&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Garcia&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="http-request">HTTP Request<a class="headerlink" href="#http-request" title="Permanent link"> ¶</a></h4>
+<p>The preceding header and payload result in the (signed, Base64url-encoded) JWT used in the following <code>Authorization</code> header:</p>
+<div class="highlight"><pre><span></span><code><span class="nf">GET</span> <span class="nn">/api/eligibility</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="o">:</span> <span class="l">verify.gov</span>
+<span class="na">Authorization</span><span class="o">:</span> <span class="l">Bearer eyJhbGciOiJIUzI1NiIsImVuYyI6IlJTMjU2IiwidHlwIjoiSldUIn0.ey</span>
+<span class="err">JqdGkiOiIwODkwY2NlNy0yNWQzLTQyNWMtYTgxYi1iYzQzN2MyZTE4YTMiLCJpc3MiOiJodHRwczovL2</span>
+NhbGl0cC5vcmciLCJpYXQiOjE2MzI4OTM0MTYsImFnZW5jeSI6IkFCQyBUcmFuc2l0IENvbXBhbnkiLC
+JlbGlnaWJpbGl0eSI6WyJzZW5pb3IiXSwic3ViIjoiQTEyMzQ1NjciLCJuYW1lIjoiR2FyY2lhIn0.sM
+VsPU4ByJNR9lADrjlZHeNi1NkBoPdXO50fnCFDDqM
+</code></pre></div>
+<h4 id="http-response">HTTP Response<a class="headerlink" href="#http-response" title="Permanent link"> ¶</a></h4>
+<div class="highlight"><pre><span></span><code><span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<span class="na">Date</span><span class="o">:</span> <span class="l">Wed, 29 Sep 2021 05:30:17 GMT</span>
+<span class="na">Content-Type</span><span class="o">:</span> <span class="l">text/plain; charset=UTF-8</span>
+<span class="na">Content-Length</span><span class="o">:</span> <span class="l">254</span>
+
+eyJhbGciOiJIUzI1NiIsImVuYyI6IlJTMjU2IiwidHlwIjoiSldUIn0.eyJqdGkiOiIwODkwY2NlNy0y
+NWQzLTQyNWMtYTgxYi1iYzQzN2MyZTE4YTMiLCJpc3MiOiJodHRwczovL3ZlcmlmeS5nb3YiLCJpYXQi
+OjE2MzI4OTM0MTcsImVsaWdpYmlsaXR5IjpbInNlbmlvciJdfQ.tos2vJOO6msv9tMDMT34f95aIRvYj
+sHRVUz5621fNlI
+</code></pre></div>
+<h4 id="response-jwt-payload">Response JWT payload<a class="headerlink" href="#response-jwt-payload" title="Permanent link"> ¶</a></h4>
+<p>Base64url-decoding the JWT in the response body yields the following payload:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;jti&quot;</span><span class="p">:</span> <span class="s2">&quot;0890cce7-25d3-425c-a81b-bc437c2e18a3&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;iss&quot;</span><span class="p">:</span> <span class="s2">&quot;https://verify.gov&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;iat&quot;</span><span class="p">:</span> <span class="mi">1632893417</span><span class="p">,</span>
+  <span class="nt">&quot;eligibility&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;senior&quot;</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>The presence of the value <code>"senior"</code> in the <code>eligibility</code> array indicates that the Request subject associated with this JWT
+(Garcia) has been verified for that eligibility.</p>
+<h3 id="2-ineligible-senior">2. Ineligible senior<a class="headerlink" href="#2-ineligible-senior" title="Permanent link"> ¶</a></h3>
+<blockquote>
+<p>This JWT was issued at 2021/09/29 05:30:16 (UTC), meaning the subject (Hernandez) is 60 years old.</p>
+</blockquote>
+<h4 id="request-jwt-payload_1">Request JWT payload<a class="headerlink" href="#request-jwt-payload_1" title="Permanent link"> ¶</a></h4>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;jti&quot;</span><span class="p">:</span> <span class="s2">&quot;b2bb29dc-6f6a-44a2-83cf-e298123bbbd2&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;iss&quot;</span><span class="p">:</span> <span class="s2">&quot;https://calitp.org&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;iat&quot;</span><span class="p">:</span> <span class="mi">1632893416</span><span class="p">,</span>
+  <span class="nt">&quot;agency&quot;</span><span class="p">:</span> <span class="s2">&quot;ABC Transit Company&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;eligibility&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;senior&quot;</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;sub&quot;</span><span class="p">:</span> <span class="s2">&quot;B2345678&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Hernandez&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="http-request_1">HTTP Request<a class="headerlink" href="#http-request_1" title="Permanent link"> ¶</a></h4>
+<p>The preceding header and payload result in the (signed, Base64url-encoded) JWT used in the following <code>Authorization</code> header:</p>
+<div class="highlight"><pre><span></span><code><span class="nf">GET</span> <span class="nn">/api/eligibility</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="o">:</span> <span class="l">verify.gov</span>
+<span class="na">Authorization</span><span class="o">:</span> <span class="l">Bearer eyJhbGciOiJIUzI1NiIsImVuYyI6IlJTMjU2IiwidHlwIjoiSldUIn0.ey</span>
+<span class="err">JqdGkiOiJiMmJiMjlkYy02ZjZhLTQ0YTItODNjZi1lMjk4MTIzYmJiZDIiLCJpc3MiOiJodHRwczovL2</span>
+NhbGl0cC5vcmciLCJpYXQiOjE2MzI4OTM0MTYsImFnZW5jeSI6IkFCQyBUcmFuc2l0IENvbXBhbnkiLC
+JlbGlnaWJpbGl0eSI6WyJzZW5pb3IiXSwic3ViIjoiQjIzNDU2NzgiLCJuYW1lIjoiSGVybmFuZGV6In
+0.iY58E7ZYQziQ8ZH7iGSwPGp9S1xbFm6JLXFK0D2E-0w
+</code></pre></div>
+<h4 id="http-response_1">HTTP Response<a class="headerlink" href="#http-response_1" title="Permanent link"> ¶</a></h4>
+<div class="highlight"><pre><span></span><code><span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<span class="na">Date</span><span class="o">:</span> <span class="l">Wed, 29 Sep 2021 05:30:17 GMT</span>
+<span class="na">Content-Type</span><span class="o">:</span> <span class="l">text/plain; charset=UTF-8</span>
+<span class="na">Content-Length</span><span class="o">:</span> <span class="l">243</span>
+
+eyJhbGciOiJIUzI1NiIsImVuYyI6IlJTMjU2IiwidHlwIjoiSldUIn0.eyJqdGkiOiJiMmJiMjlkYy02
+ZjZhLTQ0YTItODNjZi1lMjk4MTIzYmJiZDIiLCJpc3MiOiJodHRwczovL3ZlcmlmeS5nb3YiLCJpYXQi
+OjE2MzI4OTM0MTcsImVsaWdpYmlsaXR5IjpbXX0._hE8UJPYSmQ0q6xymx8UIVF8BrlZry-G82g9ssyP
+dO4
+</code></pre></div>
+<h4 id="response-jwt-payload_1">Response JWT payload<a class="headerlink" href="#response-jwt-payload_1" title="Permanent link"> ¶</a></h4>
+<p>Base64url-decoding the JWT in the response body yields the following payload:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;jti&quot;</span><span class="p">:</span> <span class="s2">&quot;b2bb29dc-6f6a-44a2-83cf-e298123bbbd2&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;iss&quot;</span><span class="p">:</span> <span class="s2">&quot;https://verify.gov&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;iat&quot;</span><span class="p">:</span> <span class="mi">1632893417</span><span class="p">,</span>
+  <span class="nt">&quot;eligibility&quot;</span><span class="p">:</span> <span class="p">[]</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>The absence of a value in the <code>eligibility</code> array indicates that the Request subject associated with this JWT (Hernandez) has
+not been verified for any eligibility.</p>
+<h3 id="3-no-eligibility-data">3. No eligibility data<a class="headerlink" href="#3-no-eligibility-data" title="Permanent link"> ¶</a></h3>
+<blockquote>
+<p>No data on the subject (Smith) exists in the Server&rsquo;s database.</p>
+</blockquote>
+<h4 id="request-jwt-payload_2">*Request JWT payload<a class="headerlink" href="#request-jwt-payload_2" title="Permanent link"> ¶</a></h4>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;jti&quot;</span><span class="p">:</span> <span class="s2">&quot;ef8e9805-bb1b-4f97-903b-6b9ab830d604&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;iss&quot;</span><span class="p">:</span> <span class="s2">&quot;https://calitp.org&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;iat&quot;</span><span class="p">:</span> <span class="mi">1632893416</span><span class="p">,</span>
+  <span class="nt">&quot;agency&quot;</span><span class="p">:</span> <span class="s2">&quot;ABC Transit Company&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;eligibility&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;senior&quot;</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;sub&quot;</span><span class="p">:</span> <span class="s2">&quot;C3456789&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Smith&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="http-request_2">HTTP Request<a class="headerlink" href="#http-request_2" title="Permanent link"> ¶</a></h4>
+<p>The preceding header and payload result in the (signed, Base64url-encoded) JWT used in the following <code>Authorization</code> header:</p>
+<div class="highlight"><pre><span></span><code><span class="nf">GET</span> <span class="nn">/api/eligibility</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="o">:</span> <span class="l">verify.gov</span>
+<span class="na">Authorization</span><span class="o">:</span> <span class="l">Bearer eyJhbGciOiJIUzI1NiIsImVuYyI6IlJTMjU2IiwidHlwIjoiSldUIn0.ey</span>
+<span class="err">JqdGkiOiJlZjhlOTgwNS1iYjFiLTRmOTctOTAzYi02YjlhYjgzMGQ2MDQiLCJpc3MiOiJodHRwczovL2</span>
+NhbGl0cC5vcmciLCJpYXQiOjE2MzI4OTM0MTYsImFnZW5jeSI6IkFCQyBUcmFuc2l0IENvbXBhbnkiLC
+JlbGlnaWJpbGl0eSI6WyJzZW5pb3IiXSwic3ViIjoiQzM0NTY3ODkiLCJuYW1lIjoiU21pdGgifQ.0xp
+eyL3GRAQGrGfvreruTra7dbJpjQQ0zLiIqm4H7sE
+</code></pre></div>
+<h4 id="http-response_2">HTTP Response<a class="headerlink" href="#http-response_2" title="Permanent link"> ¶</a></h4>
+<div class="highlight"><pre><span></span><code><span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<span class="na">Date</span><span class="o">:</span> <span class="l">Wed, 29 Sep 2021 05:30:17 GMT</span>
+<span class="na">Content-Type</span><span class="o">:</span> <span class="l">text/plain; charset=UTF-8</span>
+<span class="na">Content-Length</span><span class="o">:</span> <span class="l">246</span>
+
+eyJhbGciOiJIUzI1NiIsImVuYyI6IlJTMjU2IiwidHlwIjoiSldUIn0.eyJqdGkiOiJlZjhlOTgwNS1i
+YjFiLTRmOTctOTAzYi02YjlhYjgzMGQ2MDQiLCJpc3MiOiJodHRwczovL3ZlcmlmeS5nb3YiLCJpYXQi
+OjE2MzI4OTM0MTcsImVsaWdpYmlsaXR5IjpbXX0.LEITzkSGL4Y7uA30pRYxNG7XjDI0lSYtev5X7hNK
+Gn4
+</code></pre></div>
+<h4 id="response-jwt-payload_2">Response JWT payload<a class="headerlink" href="#response-jwt-payload_2" title="Permanent link"> ¶</a></h4>
+<p>Base64url-decoding the JWT in the response body yields the following payload:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;jti&quot;</span><span class="p">:</span> <span class="s2">&quot;ef8e9805-bb1b-4f97-903b-6b9ab830d604&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;iss&quot;</span><span class="p">:</span> <span class="s2">&quot;https://verify.gov&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;iat&quot;</span><span class="p">:</span> <span class="mi">1632893417</span><span class="p">,</span>
+  <span class="nt">&quot;eligibility&quot;</span><span class="p">:</span> <span class="p">[]</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>The absence of a value in the <code>eligibility</code> array indicates that the Request subject associated with this JWT (Smith) has not
+been verified for any eligibility.</p>
+<p><strong>Note</strong> it is important to return an empty <code>eligibility</code> array rather than an error message or 4xx HTTP code here.
+This way there is no distinction between &ldquo;exists in the database&rdquo; and &ldquo;does not exist in the database&rdquo;.</p>
+<h3 id="4-missing-request-data">4. Missing request data<a class="headerlink" href="#4-missing-request-data" title="Permanent link"> ¶</a></h3>
+<blockquote>
+<p>The request lacks a <code>sub</code> property, which is required.</p>
+</blockquote>
+<h4 id="request-jwt-payload_3">Request JWT payload<a class="headerlink" href="#request-jwt-payload_3" title="Permanent link"> ¶</a></h4>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;jti&quot;</span><span class="p">:</span> <span class="s2">&quot;b692fa7c-3dca-4d0d-90ba-e5415af48285&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;iss&quot;</span><span class="p">:</span> <span class="s2">&quot;https://calitp.org&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;iat&quot;</span><span class="p">:</span> <span class="mi">1632893416</span><span class="p">,</span>
+  <span class="nt">&quot;agency&quot;</span><span class="p">:</span> <span class="s2">&quot;ABC Transit Company&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;eligibility&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;senior&quot;</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Garcia&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="http-request_3">HTTP Request<a class="headerlink" href="#http-request_3" title="Permanent link"> ¶</a></h4>
+<p>The preceding header and payload result in the (signed, Base64url-encoded) JWT used in the following <code>Authorization</code> header:</p>
+<div class="highlight"><pre><span></span><code><span class="nf">GET</span> <span class="nn">/api/eligibility</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="o">:</span> <span class="l">verify.gov</span>
+<span class="na">Authorization</span><span class="o">:</span> <span class="l">Bearer eyJhbGciOiJIUzI1NiIsImVuYyI6IlJTMjU2IiwidHlwIjoiSldUIn0.ey</span>
+<span class="err">JqdGkiOiJiNjkyZmE3Yy0zZGNhLTRkMGQtOTBiYS1lNTQxNWFmNDgyODUiLCJpc3MiOiJodHRwczovL2</span>
+NhbGl0cC5vcmciLCJpYXQiOjE2MzI4OTM0MTYsImFnZW5jeSI6IkFCQyBUcmFuc2l0IENvbXBhbnkiLC
+JlbGlnaWJpbGl0eSI6WyJzZW5pb3IiXSwibmFtZSI6IkdhcmNpYSJ9.EtnDvEHY1CjldnH-98dIMwdir
+pxbNbuCg18R7uR8Gag
+</code></pre></div>
+<h4 id="http-response_3">HTTP Response<a class="headerlink" href="#http-response_3" title="Permanent link"> ¶</a></h4>
+<div class="highlight"><pre><span></span><code><span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">400</span> <span class="ne">Bad Request</span>
+<span class="na">Date</span><span class="o">:</span> <span class="l">Wed, 29 Sep 2021 05:30:17 GMT</span>
+<span class="na">Content-Type</span><span class="o">:</span> <span class="l">text/plain; charset=UTF-8</span>
+<span class="na">Content-Length</span><span class="o">:</span> <span class="l">258</span>
+
+eyJhbGciOiJIUzI1NiIsImVuYyI6IlJTMjU2IiwidHlwIjoiSldUIn0.eyJqdGkiOiJiNjkyZmE3Yy0z
+ZGNhLTRkMGQtOTBiYS1lNTQxNWFmNDgyODUiLCJpc3MiOiJodHRwczovL3ZlcmlmeS5nb3YiLCJpYXQi
+OjE2MzI4OTM0MTcsImVycm9yIjp7InN1YiI6Im1pc3NpbmcifX0.1Z53Z2PInyTSQRomcWhcC2Z3c_qL
+WoISH7eFv-_JJnE
+</code></pre></div>
+<h4 id="response-jwt-payload_3">Response JWT payload<a class="headerlink" href="#response-jwt-payload_3" title="Permanent link"> ¶</a></h4>
+<p>Base64url-decoding the JWT in the response body yields the following payload:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;jti&quot;</span><span class="p">:</span> <span class="s2">&quot;b692fa7c-3dca-4d0d-90ba-e5415af48285&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;iss&quot;</span><span class="p">:</span> <span class="s2">&quot;https://verify.gov&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;iat&quot;</span><span class="p">:</span> <span class="mi">1632893417</span><span class="p">,</span>
+  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;sub&quot;</span><span class="p">:</span> <span class="s2">&quot;missing&quot;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>The <code>error</code> message indicates that the Request subject associated with this JWT is missing.</p>
+<h3 id="5-invalid-request-data">5. Invalid request data<a class="headerlink" href="#5-invalid-request-data" title="Permanent link"> ¶</a></h3>
+<blockquote>
+<p>The request&rsquo;s <code>sub</code> property is not in the correct format.</p>
+</blockquote>
+<h4 id="request-jwt-payload_4">Request JWT payload<a class="headerlink" href="#request-jwt-payload_4" title="Permanent link"> ¶</a></h4>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;jti&quot;</span><span class="p">:</span> <span class="s2">&quot;d0dbacaf-e691-4ecc-a733-a42a904da607&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;iss&quot;</span><span class="p">:</span> <span class="s2">&quot;https://calitp.org&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;iat&quot;</span><span class="p">:</span> <span class="mi">1632893416</span><span class="p">,</span>
+  <span class="nt">&quot;agency&quot;</span><span class="p">:</span> <span class="s2">&quot;ABC Transit Company&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;eligibility&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;senior&quot;</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;sub&quot;</span><span class="p">:</span> <span class="s2">&quot;12345678Z&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Garcia&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="http-request_4">HTTP Request<a class="headerlink" href="#http-request_4" title="Permanent link"> ¶</a></h4>
+<p>The preceding header and payload result in the (signed, Base64url-encoded) JWT used in the following <code>Authorization</code> header:</p>
+<div class="highlight"><pre><span></span><code><span class="nf">GET</span> <span class="nn">/api/eligibility</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="o">:</span> <span class="l">verify.gov</span>
+<span class="na">Authorization</span><span class="o">:</span> <span class="l">Bearer eyJhbGciOiJIUzI1NiIsImVuYyI6IlJTMjU2IiwidHlwIjoiSldUIn0.ey</span>
+<span class="err">JqdGkiOiJkMGRiYWNhZi1lNjkxLTRlY2MtYTczMy1hNDJhOTA0ZGE2MDciLCJpc3MiOiJodHRwczovL2</span>
+NhbGl0cC5vcmciLCJpYXQiOjE2MzI4OTM0MTYsImFnZW5jeSI6IkFCQyBUcmFuc2l0IENvbXBhbnkiLC
+JlbGlnaWJpbGl0eSI6WyJzZW5pb3IiXSwic3ViIjoiMTIzNDU2NzhaIiwibmFtZSI6IkdhcmNpYSJ9.2
+w5JhbfIzOSdKWTOrP5CQdhWw9Vo8VunoASe4EVZOoI
+</code></pre></div>
+<h4 id="http-response_4">HTTP Response<a class="headerlink" href="#http-response_4" title="Permanent link"> ¶</a></h4>
+<div class="highlight"><pre><span></span><code><span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">400</span> <span class="ne">Bad Request</span>
+<span class="na">Date</span><span class="o">:</span> <span class="l">Wed, 29 Sep 2021 05:30:17 GMT</span>
+<span class="na">Content-Type</span><span class="o">:</span> <span class="l">text/plain; charset=UTF-8</span>
+<span class="na">Content-Length</span><span class="o">:</span> <span class="l">258</span>
+
+eyJhbGciOiJIUzI1NiIsImVuYyI6IlJTMjU2IiwidHlwIjoiSldUIn0.eyJqdGkiOiJkMGRiYWNhZi1l
+NjkxLTRlY2MtYTczMy1hNDJhOTA0ZGE2MDciLCJpc3MiOiJodHRwczovL3ZlcmlmeS5nb3YiLCJpYXQi
+OjE2MzI4OTM0MTcsImVycm9yIjp7InN1YiI6ImludmFsaWQifX0.V_8VA7vWTzwibGE4mfyQ0zAwKhLV
+qKDYsl2M55z8rDc
+</code></pre></div>
+<h4 id="response-jwt-payload_4">Response JWT payload<a class="headerlink" href="#response-jwt-payload_4" title="Permanent link"> ¶</a></h4>
+<p>Base64url-decoding the JWT in the response body yields the following payload:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;jti&quot;</span><span class="p">:</span> <span class="s2">&quot;d0dbacaf-e691-4ecc-a733-a42a904da607&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;iss&quot;</span><span class="p">:</span> <span class="s2">&quot;https://verify.gov&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;iat&quot;</span><span class="p">:</span> <span class="mi">1632893417</span><span class="p">,</span>
+  <span class="nt">&quot;error&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;sub&quot;</span><span class="p">:</span> <span class="s2">&quot;invalid&quot;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>The <code>error</code> message indicates that the Request subject associated with this JWT was invalid.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: API Specification" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              API Specification
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../token-signing-encryption/" class="md-footer__link md-footer__link--next" aria-label="Next: Token signing and encryption" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Token signing and encryption
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        
+          Made with
+          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+            Material for MkDocs
+          </a>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.8397ff9e.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.1e84347e.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@8.5.0/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>
